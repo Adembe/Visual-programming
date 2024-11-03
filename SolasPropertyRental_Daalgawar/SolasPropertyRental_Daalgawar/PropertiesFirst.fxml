@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.daalgawruud.PropertiesFirstController">
+   <children>
+      <Label text="Solas Property Rental" textFill="#1f07f2" wrapText="true">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Label text="Properties Listing" textFill="#1f07f2">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <TableView fx:id="TableViewProperty" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="colPropertyCode" prefWidth="75.0" text="Prop Code" />
+          <TableColumn fx:id="colPropertyType" prefWidth="100.0" text="Property Type" />
+            <TableColumn fx:id="colBedrooms" prefWidth="75.0" text="Bedrooms" />
+            <TableColumn fx:id="colBathrooms" prefWidth="75.0" text="Bathrooms" />
+            <TableColumn fx:id="colMonthlyRent" prefWidth="100.0" text="Monthly Rent" />
+            <TableColumn fx:id="colStatus" prefWidth="75.0" text="Status" />
+        </columns>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </TableView>
+      <HBox alignment="CENTER_RIGHT" prefHeight="52.0" prefWidth="479.0" spacing="10.0">
+         <children>
+            <Button fx:id="btnNewProperty" mnemonicParsing="false" onAction="#NewProperty" prefWidth="120.0" text="New Property..." />
+            <Button fx:id="btnPropertyClose" mnemonicParsing="false" onAction="#PropertyClose" prefWidth="80.0" text="Close" />
+         </children>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>

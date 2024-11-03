@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="260.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab8_1.partEditorController">
+    <children>
+        <Label layoutX="29.0" layoutY="26.0" text="Year:" />
+        <Label layoutX="31.0" layoutY="59.0" prefHeight="10.0" prefWidth="32.0" text="Make:" />
+        <Label layoutX="29.0" layoutY="91.0" text="Model:" />
+        <Label layoutX="29.0" layoutY="126.0" text="Category:" />
+        <Label layoutX="28.0" layoutY="160.0" text="Unit Price:" />
+        <Label layoutX="25.0" layoutY="191.0" text="Part Name:" />
+        <TextField fx:id="txtYear" layoutX="101.0" layoutY="21.0" prefHeight="26.0" prefWidth="66.0" />
+        <TextField fx:id="txtPartName" layoutX="101.0" layoutY="187.0" prefHeight="26.0" prefWidth="282.0" />
+        <TextField fx:id="txtUnitPrice" layoutX="101.0" layoutY="155.0" prefHeight="26.0" prefWidth="98.0" />
+        <ComboBox fx:id="cbxMakes" layoutX="101.0" layoutY="55.0" prefHeight="26.0" prefWidth="130.0" />
+        <ComboBox fx:id="cbxModels" layoutX="101.0" layoutY="86.0" prefHeight="26.0" prefWidth="130.0" />
+        <ComboBox fx:id="cbxCategories" layoutX="101.0" layoutY="121.0" prefHeight="26.0" prefWidth="129.0" />
+        <Label layoutX="214.0" layoutY="159.0" text="Part #:" />
+        <TextField fx:id="txtPartNumber" layoutX="256.0" layoutY="154.0" prefHeight="26.0" prefWidth="87.0" />
+        <Button fx:id="btnNewMake" layoutX="238.0" layoutY="56.0" mnemonicParsing="false" onAction="#makeEditorEvent" prefHeight="26.0" prefWidth="108.0" text="New Make..." />
+        <Button fx:id="btnNewModel" layoutX="238.0" layoutY="86.0" mnemonicParsing="false" onAction="#modelEditorEvent" prefHeight="26.0" prefWidth="108.0" text="New Model..." />
+        <Button fx:id="btnNewCategory" layoutX="238.0" layoutY="121.0" mnemonicParsing="false" onAction="#itemCategoryEvent" prefHeight="26.0" prefWidth="108.0" text="New Category..." />
+        <Button fx:id="btnClose" layoutX="305.0" layoutY="220.0" mnemonicParsing="false" onAction="#close" prefHeight="26.0" prefWidth="78.0" text="Close" />
+        <Button fx:id="btnSubmit" layoutX="217.0" layoutY="220.0" mnemonicParsing="false" onAction="#btnSubmitEvent" prefHeight="26.0" prefWidth="78.0" text="Submit" />
+    </children>
+</AnchorPane>

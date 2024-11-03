@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab8_1.HelloController">
+    <children>
+        <Label layoutX="245.0" layoutY="14.0" text="College Park Auto Parts">
+            <font>
+                <Font name="System Bold" size="25.0" />
+            </font>
+            <textFill>
+                <LinearGradient endX="0.5160984776236794" endY="1.0">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color />
+                            </color>
+                        </Stop>
+                        <Stop offset="0.9938556067588327">
+                            <color>
+                                <Color red="0.37211206555366516" blue="0.9700000286102295" />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color green="0.5811639428138733" blue="0.9700000286102295" />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </textFill>
+        </Label>
+        <Pane layoutX="553.0" layoutY="44.0" prefHeight="2.0" prefWidth="198.0" style="-fx-background-color: black;" />
+        <Pane layoutY="43.0" prefHeight="2.0" prefWidth="195.0" style="-fx-background-color: black;" />
+        <StackPane layoutX="15.0" layoutY="81.0" prefHeight="405.0" prefWidth="186.0">
+            <children>
+                <TreeView fx:id="tvwAutoParts" prefHeight="390.0" prefWidth="186.0" />
+            </children>
+        </StackPane>
+        <Label layoutX="14.0" layoutY="54.0" text="Part Identification">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="213.0" layoutY="54.0" text="Available Parts">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <StackPane layoutX="213.0" layoutY="81.0" prefHeight="122.0" prefWidth="523.0">
+            <children>
+                <TableView fx:id="lvwAutoParts" prefHeight="122.0" prefWidth="416.0">
+                    <columns>
+                        <TableColumn fx:id="colPartNumber" prefWidth="67.19999694824219" text="Part #" />
+                        <TableColumn fx:id="colPartName" prefWidth="348.0" text="Part Name" />
+                        <TableColumn fx:id="colUnitPrice" minWidth="0.0" prefWidth="107.20000000000005" text="Unit Price" />
+                    </columns>
+                </TableView>
+            </children>
+        </StackPane>
+        <Label layoutX="213.0" layoutY="214.0" text="Customer Order - Selected Parts">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="213.0" layoutY="242.0" text="Part #" />
+        <Label layoutX="268.0" layoutY="242.0" text="Part Name" />
+        <TextField fx:id="txtPartNumber" layoutX="212.0" layoutY="260.0" prefHeight="26.0" prefWidth="46.0" />
+        <TextField fx:id="txtPartName" layoutX="267.0" layoutY="260.0" prefHeight="26.0" prefWidth="283.0" />
+        <TextField fx:id="txtSubTotal" layoutX="674.0" layoutY="260.0" prefHeight="26.0" prefWidth="57.0" />
+        <TextField fx:id="txtQuantity" layoutX="629.0" layoutY="260.0" prefHeight="26.0" prefWidth="38.0" />
+        <TextField fx:id="txtUnitPrice" layoutX="555.0" layoutY="260.0" prefHeight="26.0" prefWidth="67.0" />
+        <Label layoutX="555.0" layoutY="242.0" text="Unit Price" />
+        <Label layoutX="627.0" layoutY="242.0" text="Qty" />
+        <Label layoutX="674.0" layoutY="242.0" text="Sub Total" />
+        <Button fx:id="btnAdd" layoutX="209.0" layoutY="294.0" mnemonicParsing="false" onAction="#insertButton" prefHeight="26.0" prefWidth="523.0" text="Add/Select" />
+        <TableView fx:id="lvwSelectedParts" layoutX="212.0" layoutY="330.0" prefHeight="156.0" prefWidth="523.0">
+            <columns>
+                <TableColumn fx:id="colPartNumberSelected" prefWidth="54.399993896484375" text="Part #" />
+                <TableColumn fx:id="colPartNameSelected" prefWidth="270.3999786376953" text="Part Name" />
+                <TableColumn fx:id="colUnitPriceSelected" prefWidth="79.20001220703125" text="Unit Price" />
+                <TableColumn fx:id="colQuantitySelected" prefWidth="51.20001220703125" text="Qty" />
+                <TableColumn fx:id="colSubTotalSelected" prefWidth="69.59991455078125" text="Sub-Total" />
+            </columns>
+        </TableView>
+        <Label layoutX="14.0" layoutY="497.0" text="Order Summary" />
+        <Button fx:id="btnNewAutoPart" layoutX="15.0" layoutY="523.0" mnemonicParsing="false" onAction="#toPartEditor" prefHeight="26.0" prefWidth="132.0" text="New Auto Part..." />
+        <Button fx:id="btnNewCustomerOrder" layoutX="15.0" layoutY="553.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="132.0" text="New Customer Order" />
+        <Label layoutX="374.0" layoutY="527.0" text="Tax Rate:" />
+        <Label layoutX="156.0" layoutY="557.0" text="Receipt #:" />
+        <Button fx:id="btnSave" layoutX="290.0" layoutY="522.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="70.0" text="Save" />
+        <Button fx:id="btnOpen" layoutX="290.0" layoutY="552.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="70.0" text="Open" />
+        <Label layoutX="156.0" layoutY="526.0" text="Receipt #:" />
+        <Label layoutX="374.0" layoutY="556.0" text="Tax Amount:" />
+        <TextField fx:id="txtSave" layoutX="217.0" layoutY="523.0" prefHeight="26.0" prefWidth="63.0" />
+        <TextField fx:id="txtOpen" layoutX="217.0" layoutY="553.0" prefHeight="26.0" prefWidth="63.0" />
+        <TextField fx:id="txtTaxRate" layoutX="446.0" layoutY="523.0" prefHeight="26.0" prefWidth="50.0" text="7.75" />
+        <TextField fx:id="txtTaxAmount" layoutX="446.0" layoutY="551.0" prefHeight="26.0" prefWidth="70.0" text="0.00" />
+        <Label layoutX="500.0" layoutY="527.0" prefHeight="18.0" prefWidth="14.0" text="\%" />
+        <Label layoutX="530.0" layoutY="527.0" text="Parts Total:" />
+        <Label layoutX="530.0" layoutY="555.0" text="Order Total:" />
+        <TextField fx:id="txtPartsTotal" layoutX="604.0" layoutY="522.0" prefHeight="26.0" prefWidth="57.0" text="0.00" />
+        <TextField fx:id="txtOrderTotal" layoutX="604.0" layoutY="550.0" prefHeight="26.0" prefWidth="57.0" text="0.00" />
+        <Button fx:id="btnClose" layoutX="677.0" layoutY="526.0" mnemonicParsing="false" onAction="#close" prefHeight="43.0" prefWidth="59.0" text="Close" />
+    </children>
+</AnchorPane>

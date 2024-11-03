@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.daalgawruud.SolasRentalController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="90.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="btnRentPayment" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#RentPayment" prefHeight="50.0" prefWidth="120.0" text="Rent Payment">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="btnRentalAllocations" mnemonicParsing="false" onAction="#RentalAllocations" prefHeight="50.0" prefWidth="120.0" text="Rental Allocations">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="90.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="btnTenants" mnemonicParsing="false" onAction="#Tenants" prefHeight="50.0" prefWidth="120.0" text="Tenants">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="btnRentalProperties" mnemonicParsing="false" onAction="#RentalProperties" prefHeight="50.0" prefWidth="120.0" text="Rental Properties">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="90.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="btnClose" mnemonicParsing="false" onAction="#Close" prefHeight="50.0" prefWidth="260.0" text="Close" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

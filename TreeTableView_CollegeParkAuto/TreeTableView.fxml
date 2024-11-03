@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.daalgawruud.CarPartsTreeTableViewController">
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+    <top>
+        <HBox alignment="CENTER" prefHeight="34.0" prefWidth="682.0" BorderPane.alignment="CENTER">
+            <children>
+                <Line endX="100.0" startX="-100.0" translateY="10.0" />
+                <Label alignment="CENTER" contentDisplay="CENTER" style="-fx-font-weight: bold;" text="College Park Auto-Parts" textFill="#0900ff">
+                    <font>
+                        <Font name="Times New Roman" size="24.0" />
+                    </font>
+                </Label>
+                <Line endX="100.0" startX="-100.0" translateY="10.0" />
+            </children>
+        </HBox>
+    </top>
+    <center>
+        <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-border-color: d3d3d3;" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets bottom="10.0" right="10.0" top="10.0" />
+            </BorderPane.margin>
+            <children>
+                <TreeTableView fx:id="treeTableView" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                        <TreeTableColumn fx:id="colYears" prefWidth="160.0" text="Year" />
+                        <TreeTableColumn fx:id="colMake" prefWidth="160.0" text="Make" />
+                        <TreeTableColumn fx:id="colModel" prefWidth="160.0" text="Model" />
+                        <TreeTableColumn fx:id="colType" prefWidth="164.7999267578125" text="Type" />
+                    </columns>
+                    <StackPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </StackPane.margin>
+                </TreeTableView>
+                <Label style="-fx-background-color: f4f4f4;" text="Car Identification" translateX="-250.0" translateY="-233.0">
+                    <padding>
+                        <Insets left="5.0" right="5.0" />
+                    </padding>
+               <font>
+                  <Font size="18.0" />
+               </font>
+                </Label>
+            </children>
+        </StackPane>
+    </center>
+</BorderPane>

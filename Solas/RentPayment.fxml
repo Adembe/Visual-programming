@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<?import com.example.daalgawruud.MaskedTextField?>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="380.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.daalgawruud.RentPaymentController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="80.0" prefWidth="200.0">
+         <children>
+            <Label prefWidth="450.0" style="-fx-background-color: gray; -fx-border-color: black;" text="Rent Identification" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox layoutX="10.0" layoutY="245.0" prefHeight="150.0" prefWidth="200.0">
+         <children>
+            <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="150.0" spacing="18.0">
+               <children>
+                  <Label text="Date Received:">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Allocation Code:">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Tenant Account #:">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Tenant Name:">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="150.0" spacing="10.0">
+               <children>
+                  <DatePicker fx:id="RentPaymentDateRec" />
+                  <MaskedTextField mask="####-####" fx:id="RentPaymentAlloCode" />
+                  <TextField fx:id="RentPaymentTenantAccount" />
+                  <TextField fx:id="RentPaymentTenantName" />
+               </children>
+            </VBox>
+            <VBox alignment="BOTTOM_LEFT" prefHeight="200.0" prefWidth="150.0" spacing="18.0">
+               <children>
+                  <Label text="Receipt #:">
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Property Code:">
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Property Type:">
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="150.0" spacing="10.0">
+               <children>
+                  <TextField fx:id="RentPaymentReceipt" />
+                  <TextField fx:id="RentPaymentPropertyCode" />
+                  <TextField fx:id="RentPaymentPropertyType" />
+               </children>
+            </VBox>
+         </children>
+         <VBox.margin>
+            <Insets left="25.0" right="25.0" top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="80.0" prefWidth="200.0">
+         <children>
+            <Label prefWidth="450.0" style="-fx-background-color: gray; -fx-border-color: black;" text="Payment Summary" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="80.0" prefWidth="200.0" spacing="10.0">
+         <children>
+            <Label prefWidth="100.0" text="Payment For:">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Label>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label text="Month:" />
+                  <ComboBox fx:id="RentPaymentMonth" prefWidth="150.0" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label text="Year:" />
+                  <TextField fx:id="RentPaymentYear" maxWidth="50.0" prefWidth="50.0" />
+               </children>
+            </VBox>
+            <Label prefWidth="120.0" text="Amount Received:" />
+            <TextField fx:id="RentPaymentAmountReceived" maxWidth="100.0" />
+         </children>
+         <VBox.margin>
+            <Insets left="25.0" right="25.0" top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER_RIGHT" prefHeight="90.0" prefWidth="200.0" spacing="10.0">
+         <children>
+            <Button fx:id="btnRentPaymentOK" mnemonicParsing="false" onAction="#RentPaymentOk" prefWidth="80.0" text="Ok">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="btnCancel" mnemonicParsing="false" onAction="#Cancel" prefWidth="80.0" text="Cancel">
+               <HBox.margin>
+                  <Insets right="25.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>
